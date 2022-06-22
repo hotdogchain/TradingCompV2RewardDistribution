@@ -1,0 +1,56 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matt Condon (@shrugs)",
+			"details": "Provides counters that can only be incremented or decremented by one. This can be used e.g. to track the number of elements in a mapping, issuing ERC721 ids, or counting request ids. Include with `using Counters for Counters.Counter;` Since it is not possible to overflow a 256 bit integer with increments of one, `increment` can skip the {SafeMath} overflow check, thereby saving gas. This does assume however correct usage, in that the underlying `_value` is never directly accessed.",
+			"kind": "dev",
+			"methods": {},
+			"title": "Counters",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Counters.sol": "Counters"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeMath.sol": {
+			"keccak256": "0x186349419a02f096ad33a3a314500216b1d683dfff84bb58eb34a9c44adb2082",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a46c1daab5cd0e5bc4276769c07fe3674f2427866535e3139db6bcce62690e9",
+				"dweb:/ipfs/QmevHusaMw5EqrmuVMpcgpif3TDatN9XUVdueYuPyVNsap"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Counters.sol": {
+			"keccak256": "0x2fae2a3dfa1408526b880daaace7f8845f25865d40b2579f868f6c9cbdbbb922",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://594439aee2c2b8b461b7a4db9b41ff1d4a82210075a2090d8ce4ae8c374aa164",
+				"dweb:/ipfs/QmWzpXc4UWB9TQDVXDrViEy4zq9rn2jdcTktT4jMNnMKmK"
+			]
+		}
+	},
+	"version": 1
+}

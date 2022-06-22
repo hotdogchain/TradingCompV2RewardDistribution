@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Wrappers around BEP20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeBEP20 for IBEP20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeBEP20",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeBEP20.sol": "SafeBEP20"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IBEP20.sol": {
+			"keccak256": "0x1068a944172834b3f3ef277c2638972873fb2d36dc04d0332d4a8b8776c96cae",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6b1ba12eacfda8f12b1fd75e76d98442eb666c32aa8a900aab716e1e7ce67ed0",
+				"dweb:/ipfs/QmSs6LMKeureNtQY5Rukn8scmRtB1QfHJjwUnz8gDf1Q1A"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeBEP20.sol": {
+			"keccak256": "0x9b181a3dc4902ffdf98347b1c5815ba23afe6d286036ad45570ddaa78dc1c46a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2c9c5fde88323539619450166df5eb28c02686b02975debef07123386ba6b9d",
+				"dweb:/ipfs/QmZp4UkL8ztkWwRcXkzsaR9QXQBtfTiXdViGTSXcg8Ff4c"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeMath.sol": {
+			"keccak256": "0x186349419a02f096ad33a3a314500216b1d683dfff84bb58eb34a9c44adb2082",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a46c1daab5cd0e5bc4276769c07fe3674f2427866535e3139db6bcce62690e9",
+				"dweb:/ipfs/QmevHusaMw5EqrmuVMpcgpif3TDatN9XUVdueYuPyVNsap"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Address.sol": {
+			"keccak256": "0xf6ef080fad8534f258b526768063c666e701b135ec3bde9bdffc77254e399515",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://043eada9acabd207d4aaa1706ca581c514ba75e8ec9183a805ff8d1f25ccd445",
+				"dweb:/ipfs/QmU6fLUSyR7YSMVtcGtj5epEvpxDBERGMS5L92WG7JKQVH"
+			]
+		}
+	},
+	"version": 1
+}

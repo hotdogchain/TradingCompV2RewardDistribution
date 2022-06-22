@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "String operations.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/leilei/Downloads/TradingCompV2RewardDistribution/Strings.sol": "Strings"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/Strings.sol": {
+			"keccak256": "0x0cb3333af3b3314f5ffb94019994506abbef512cdaaf0d45f0df8627dd63dbf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f967c5a0cf2cd14a4886b9d96e41c836999b82ea602ccde10e58e7ac21d2d39f",
+				"dweb:/ipfs/QmW6sBVKYjpS8fKQyfmaTTWGn336tZ2veq78xXupTyQfLA"
+			]
+		}
+	},
+	"version": 1
+}

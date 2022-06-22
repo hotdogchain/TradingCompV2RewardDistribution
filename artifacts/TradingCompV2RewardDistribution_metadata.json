@@ -1,0 +1,886 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_pancakeProfileAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_bunnyStationAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_cakeTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_lazioTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_portoTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_santosTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tradingCompV2Address",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum TradingCompV2RewardDistribution.CompetitionStatus",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"name": "NewCompetitionStatus",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "teamId",
+						"type": "uint256"
+					}
+				],
+				"name": "TeamRewardsUpdate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "teamId",
+						"type": "uint256"
+					}
+				],
+				"name": "UserRegister",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "userAddresses",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "rewardGroup",
+						"type": "uint256"
+					}
+				],
+				"name": "UserUpdateMultiple",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "teamId",
+						"type": "uint256"
+					}
+				],
+				"name": "WinningTeam",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bunnyId",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bunnyMintingStation",
+				"outputs": [
+					{
+						"internalType": "contract BunnyMintingStation",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cakeToken",
+				"outputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "claimCakeRemainder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "claimInformation",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "claimLazioRemainder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "claimPortoRemainder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "claimReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "claimSantosRemainder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentStatus",
+				"outputs": [
+					{
+						"internalType": "enum TradingCompV2RewardDistribution.CompetitionStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lazioToken",
+				"outputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numberTeams",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pancakeProfile",
+				"outputs": [
+					{
+						"internalType": "contract IPancakeProfile",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "portoToken",
+				"outputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "santosToken",
+				"outputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tradingCompV2",
+				"outputs": [
+					{
+						"internalType": "contract TradingCompV2",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum TradingCompV2RewardDistribution.CompetitionStatus",
+						"name": "_status",
+						"type": "uint8"
+					}
+				],
+				"name": "updateCompetitionStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_teamId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_userCampaignIds",
+						"type": "uint256[5]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_cakeRewards",
+						"type": "uint256[5]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_lazioRewards",
+						"type": "uint256[5]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_portoRewards",
+						"type": "uint256[5]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_santosRewards",
+						"type": "uint256[5]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_pointRewards",
+						"type": "uint256[5]"
+					}
+				],
+				"name": "updateTeamRewards",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_winningTeamId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_tokenURI",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_bunnyId",
+						"type": "uint8"
+					}
+				],
+				"name": "updateWinningTeamAndTokenURIAndBunnyId",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userTradingStats",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "hasClaimed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winningTeamId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"claimCakeRemainder(uint256)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_amount": ": amount of CAKE to withdraw (decimals = 18)"
+					}
+				},
+				"claimInformation(address)": {
+					"details": "It does not check if user has a profile since registration required a profile.",
+					"params": {
+						"_userAddress": ": the user address"
+					},
+					"returns": {
+						"_0": "hasRegistered: has the user registered",
+						"_1": "hasUserClaimed: whether user has claimed",
+						"_2": "userRewardGroup: the final reward group for each user (i.e. tier)",
+						"_3": "userCakeRewards: the CAKE to claim/claimed",
+						"_4": "userLazioRewards: the LAZIO to claim/claimed",
+						"_5": "userPortoRewards: the PORTO to claim/claimed",
+						"_6": "userSantosRewards: the Santos to claim/claimed",
+						"_7": "userPointReward: the number of points to claim/claimed",
+						"_8": "canClaimNFT: whether the user gets/got a NFT"
+					}
+				},
+				"claimLazioRemainder(uint256)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_amount": ": amount of LAZIO to withdraw (decimals = 8)"
+					}
+				},
+				"claimPortoRemainder(uint256)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_amount": ": amount of PORTO to withdraw (decimals = 8)"
+					}
+				},
+				"claimReward()": {
+					"details": "It is only available during claiming phase"
+				},
+				"claimSantosRemainder(uint256)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_amount": ": amount of SANTOS to withdraw (decimals = 8)"
+					}
+				},
+				"constructor": {
+					"params": {
+						"_bunnyStationAddress": ": BunnyMintingStation address",
+						"_cakeTokenAddress": ": the address of the CAKE token",
+						"_lazioTokenAddress": ": the address of the LAZIO fan token",
+						"_pancakeProfileAddress": ": PancakeProfile address",
+						"_portoTokenAddress": ": the address of the PORTO fan token",
+						"_santosTokenAddress": ": the address of the SANTOS fan token",
+						"_tradingCompV2Address": ": the address of the TradingCompV2 fan token"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"updateCompetitionStatus(uint8)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_status": ": CompetitionStatus (uint8)"
+					}
+				},
+				"updateTeamRewards(uint256,uint256[5],uint256[5],uint256[5],uint256[5],uint256[5],uint256[5])": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_cakeRewards": ": CAKE rewards for each user group for teamId",
+						"_lazioRewards": ": LAZIO rewards for each user group for teamId",
+						"_pointRewards": ": point to collect for each user group for teamId",
+						"_portoRewards": ": PORTO rewards for each user group for teamId",
+						"_santosRewards": ": SANTOS rewards for each user group for teamId",
+						"_teamId": ": the teamId",
+						"_userCampaignIds": ": campaignIds for each user group for teamId"
+					}
+				},
+				"updateWinningTeamAndTokenURIAndBunnyId(uint256,string,uint8)": {
+					"details": "Only callable by owner.",
+					"params": {
+						"_bunnyId": ": the bunnyId for winners (e.g. 15)",
+						"_tokenURI": ": the tokenURI",
+						"_winningTeamId": ": the winning teamId"
+					}
+				}
+			},
+			"title": "TradingCompV2RewardDistribution.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"claimCakeRemainder(uint256)": {
+					"notice": "It allows the owner to claim the CAKE remainder"
+				},
+				"claimInformation(address)": {
+					"notice": "It checks the claim information"
+				},
+				"claimLazioRemainder(uint256)": {
+					"notice": "It allows the owner to claim the LAZIO remainder"
+				},
+				"claimPortoRemainder(uint256)": {
+					"notice": "It allows the owner to claim the PORTO remainder"
+				},
+				"claimReward()": {
+					"notice": "It allows users to claim reward after the end of trading competition."
+				},
+				"claimSantosRemainder(uint256)": {
+					"notice": "It allows the owner to claim the SANTOS remainder"
+				},
+				"constructor": "It initializes the contract.",
+				"updateCompetitionStatus(uint8)": {
+					"notice": "It allows the owner to change the competition status"
+				},
+				"updateTeamRewards(uint256,uint256[5],uint256[5],uint256[5],uint256[5],uint256[5],uint256[5])": {
+					"notice": "It allows the owner to update team rewards"
+				},
+				"updateWinningTeamAndTokenURIAndBunnyId(uint256,string,uint8)": {
+					"notice": "It allows the owner to set the winning teamId (to collect NFT)"
+				}
+			},
+			"notice": "It is a contract for users to collect points based on off-chain events",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/leilei/Downloads/TradingCompV2RewardDistribution/TradingCompV2RewardDistribution.sol": "TradingCompV2RewardDistribution"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/BunnyMintingStation.sol": {
+			"keccak256": "0x40cf2ddb0522252d5ae132857fff6e2dd24357619f0301f2afabc6d28abe364e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1983623901910fd26d0805d5fb71830e7f544b99c9bc46763cedb1b20f1c9d5a",
+				"dweb:/ipfs/QmTsxnUCBvyD562hRcwJeHmcQEUVd2MnpBYGZS43WaTWWL"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/ERC165.sol": {
+			"keccak256": "0x860a5c334af8eb2ef6c5e1715074b1cdda41f35c052eec102850538843f587da",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9e2f052b815fd77a36563b95584f266c6b5ac5ee8aba173e9a052366c5bb98e6",
+				"dweb:/ipfs/QmWCpRa9WCgLoEkkN9VeM2fR1vEAXGB7H899EvzYUfq9vP"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/ERC721.sol": {
+			"keccak256": "0x2b185218ac9eec4c15cfe4c4916108419b5baf7b87bfdc230a0f88e039ed4ace",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://52ba7837b4b6ed3aa568b50ae3e286515fa87363be49debdb3b508f64cfa32ad",
+				"dweb:/ipfs/QmQ5Z9YozA1Ru4j3M1wFQMfQcZLQMyCQLm4r4uzD66RhVX"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IBEP20.sol": {
+			"keccak256": "0x1068a944172834b3f3ef277c2638972873fb2d36dc04d0332d4a8b8776c96cae",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6b1ba12eacfda8f12b1fd75e76d98442eb666c32aa8a900aab716e1e7ce67ed0",
+				"dweb:/ipfs/QmSs6LMKeureNtQY5Rukn8scmRtB1QfHJjwUnz8gDf1Q1A"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IERC165.sol": {
+			"keccak256": "0xf38f4657b91bfa81e1b00eb3622db5f91e7745c50210e9ab69e0510f66ac2113",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://86ff78e489c2ad8971223ac216182f464d41d587b42e344639d8976fa3a0a955",
+				"dweb:/ipfs/QmSLkpb6gCSVJZWgUxK45ucRdyniveGxQwTuEtQEeFFC1d"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IERC721.sol": {
+			"keccak256": "0xed510b90419766adb4675cb29035134cd2b429bf3a7e896e71c582ac9ef455e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://40c72068474d0e59d159165ffbfcdce0a627294c7d9d9874a8939c341a162eec",
+				"dweb:/ipfs/QmXEN1ToThoWTvKwdF1Ljcvd8Y4F5cBimmpxbd2Gprkqho"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IERC721Enumerable.sol": {
+			"keccak256": "0x16f54bfc314e8ab8fbb0652655d5ca431ffdc04ac398add9e18ceaf497e4f0ac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b844115b499273d9b12ffa21f8620c9eba8f0d7af0cabcb14e4c2f2bb70403a",
+				"dweb:/ipfs/QmdG164C5qQDLnkUaKijikH5tpc7qddkNutxiTtG9MCipk"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IERC721Metadata.sol": {
+			"keccak256": "0xab01f8cb50c14575c1cd73a2300de7b194c2241727dfe7b3ae940a10dabf9db5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e3bb110999f0aecc9c88ba8a339ceef0890c76f2218a09ae8c470a2215aa05f",
+				"dweb:/ipfs/QmTToEyTEzvdVP4euqeTzt7mjeWMWiZpx6yoxSoPmeUWdn"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/IERC721Receiver.sol": {
+			"keccak256": "0xb14c5274ec3ac021a4633360520f4b2a52c1dfa0c3a9a1f9b1dedd758b25a351",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://369ed3ade4946115cf868173ba7362d2435c52b464fde264490984a6f03e2781",
+				"dweb:/ipfs/QmRLwNJDrw6w3FeVh7WvwgQ6uYXiQHLDnYv78369QPuQRk"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/PancakeBunnies.sol": {
+			"keccak256": "0x82d85e1844ed10be87f438537cad3af5f14133a381e8384ab16a8510bfac61e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://50ba7b52e0eb4c42d70d8cbe692cfc8cb7edabbae80aa582a8a40016c02b09cb",
+				"dweb:/ipfs/QmTr9Bj1G6DicwdoV1b8V3WM1yA6YVrgdPGHCRH42ryZmn"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeBEP20.sol": {
+			"keccak256": "0x9b181a3dc4902ffdf98347b1c5815ba23afe6d286036ad45570ddaa78dc1c46a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2c9c5fde88323539619450166df5eb28c02686b02975debef07123386ba6b9d",
+				"dweb:/ipfs/QmZp4UkL8ztkWwRcXkzsaR9QXQBtfTiXdViGTSXcg8Ff4c"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/SafeMath.sol": {
+			"keccak256": "0x186349419a02f096ad33a3a314500216b1d683dfff84bb58eb34a9c44adb2082",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a46c1daab5cd0e5bc4276769c07fe3674f2427866535e3139db6bcce62690e9",
+				"dweb:/ipfs/QmevHusaMw5EqrmuVMpcgpif3TDatN9XUVdueYuPyVNsap"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/TradingCompV2.sol": {
+			"keccak256": "0x6754e420e11130971378d20f888d97b6e24356227b7929b26723ca480c8d3657",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6bead7e045722703949dc4a65cf8d886eba16b47aa01faa108f97561f9e7e3f5",
+				"dweb:/ipfs/QmQQg5w1iRS18meAhLw1fdukcPtexYbVBEYgGcgz7jZ2xh"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/TradingCompV2RewardDistribution.sol": {
+			"keccak256": "0x131a1f3fb260c6ace1ffa52298b31a7ac15134cd1a5520f2c5503ffc8a4d1106",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7c3d3ac1da799d55fa0be1a26437a41beee22c824d6e714cfe507d04c91c5f4a",
+				"dweb:/ipfs/QmedLueeRRbrc68xKcahjCaXEFg5YZgDoryJktNTHAbocM"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/access/AccessControl.sol": {
+			"keccak256": "0x9e79b7ea7f540f401e77a34c5fb0b3a967390d891d5e406b5227355526d862f5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ae00ae3410656927880af51ee7ac53411932fb6b43b4b7f47ea4f94508cca4d",
+				"dweb:/ipfs/QmRPsz7ymzHYjFQNNqQZNEFs8fs6fjJy7zbqeVzDvrvmwY"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/access/Ownable.sol": {
+			"keccak256": "0xbe874e706694a0a7512968918f0491b66416e4debdd88638572f0a28088f7eba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0091df8419059c128e62d9d7763749b87a60bb4b29262662a559733691230d28",
+				"dweb:/ipfs/QmQERKm24rCdqndkHwrV7YcVmqi9GgwBw38ZemreVWBXYH"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/interfaces/IPancakeProfile.sol": {
+			"keccak256": "0x00c462e017d2ae8842d00405e680d077a064a45d1d26c715cc26f9098d9de206",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://72e544da36bdabedb8af4f0a37388f2df30b8728f766ffe1eb9ce887a06811b3",
+				"dweb:/ipfs/QmXtM7moA787R6yjER5JyP59AnXGzCVFuf3STzgCSagWKR"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Address.sol": {
+			"keccak256": "0xf6ef080fad8534f258b526768063c666e701b135ec3bde9bdffc77254e399515",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://043eada9acabd207d4aaa1706ca581c514ba75e8ec9183a805ff8d1f25ccd445",
+				"dweb:/ipfs/QmU6fLUSyR7YSMVtcGtj5epEvpxDBERGMS5L92WG7JKQVH"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Context.sol": {
+			"keccak256": "0xd3e88da8695a1d63936f7bbf3b3441056c44d167e679a80f9a1b5ffafb11fad9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://587786c556944a0a561b5f5ab16716263b42ca8dd6cc1102b75f4c4d1a802325",
+				"dweb:/ipfs/QmU9Y13bBrVy2uE4TiHfPSTFQXV2BeUnxrMo135zRy7wJT"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Counters.sol": {
+			"keccak256": "0x2fae2a3dfa1408526b880daaace7f8845f25865d40b2579f868f6c9cbdbbb922",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://594439aee2c2b8b461b7a4db9b41ff1d4a82210075a2090d8ce4ae8c374aa164",
+				"dweb:/ipfs/QmWzpXc4UWB9TQDVXDrViEy4zq9rn2jdcTktT4jMNnMKmK"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/EnumerableMap.sol": {
+			"keccak256": "0x95c4448beadcdef821f97eb1467c02847c37f7fb3f0ac38c051bcde120418a1f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4e310c1e4570ce5117a40776c0354b68cea43fc72dc4fae3f0cd15a4c2bff1e6",
+				"dweb:/ipfs/QmWWEqBv5aUx7RqFm2RUHrgCz5iRDcYsRdA92gMXssShhK"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/EnumerableSet.sol": {
+			"keccak256": "0x9b5fc5c4cc4328e77b03040210a5c5e1d962e4c27c39ba158304bf0da7e19c7e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://55e32c9a45505869c0ec0c8dd766f094f83f76cae187faeaa21e3974bf108ead",
+				"dweb:/ipfs/QmdavSe16js7adAHekEaaT1gvxYGtEy4tNsH7NNnwz2dKg"
+			]
+		},
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/utils/Strings.sol": {
+			"keccak256": "0x0cb3333af3b3314f5ffb94019994506abbef512cdaaf0d45f0df8627dd63dbf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f967c5a0cf2cd14a4886b9d96e41c836999b82ea602ccde10e58e7ac21d2d39f",
+				"dweb:/ipfs/QmW6sBVKYjpS8fKQyfmaTTWGn336tZ2veq78xXupTyQfLA"
+			]
+		}
+	},
+	"version": 1
+}
