@@ -1,9 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2020-09-29
-*/
-
-// File: contracts/IBEP20.sol
-
 pragma solidity ^0.6.0;
 
 interface IBEP20 {
@@ -97,9 +91,7 @@ interface IBEP20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-// File: openzeppelin-solidity/contracts/GSN/Context.sol
 
-// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.6.0;
 
@@ -124,9 +116,7 @@ abstract contract Context {
     }
 }
 
-// File: openzeppelin-solidity/contracts/math/SafeMath.sol
 
-// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.6.0;
 
@@ -286,9 +276,7 @@ library SafeMath {
     }
 }
 
-// File: openzeppelin-solidity/contracts/proxy/Initializable.sol
 
-// SPDX-License-Identifier: MIT
 
 pragma solidity >=0.4.24 <0.7.0;
 
@@ -351,7 +339,7 @@ abstract contract Initializable {
     }
 }
 
-// File: contracts/BEP20TokenImplementation.sol
+
 
 pragma solidity ^0.6.0;
 
