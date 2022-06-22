@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Collection of functions related to the address type",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/leilei/Downloads/TradingCompV2RewardDistribution/contracts/BEP20UpgradeableProxy.sol": "Address"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/leilei/Downloads/TradingCompV2RewardDistribution/contracts/BEP20UpgradeableProxy.sol": {
+			"keccak256": "0x3c4f3e7b574e7ae8f4746ae26c0c7162703b60985595cfe659bbdd15309ccef5",
+			"urls": [
+				"bzz-raw://72233608e1d259958031a2088188149f4b805986beadbec67093bb1e5320b88e",
+				"dweb:/ipfs/QmVb7Tpv1Nd7K8nb9mrBEhesQkPqPfcD6i1bdPStR6akaK"
+			]
+		}
+	},
+	"version": 1
+}
